@@ -1,5 +1,5 @@
 import { useState } from "react";
-import { IoMailOutline, IoCallOutline, IoLocationOutline } from "react-icons/io5";
+import { IoMailOutline, IoCallOutline, IoLocationOutline, IoBriefcaseOutline, IoBookOutline, IoBuildOutline, IoCheckboxOutline, IoFolderOpenOutline  } from "react-icons/io5";
 
 function App() {
   const [darkMode, setDarkMode] = useState(false);
@@ -12,13 +12,13 @@ function App() {
     <div className={`${darkMode && "dark"}`}>
       <main className="flex flex-col min-h-screen dark:bg-black">
         {/* Profile Section */}
-        <div className="flex align-middle w-6/12 mx-auto text-black font-poppins mt-10">
-          <div className="h-auto w-52">
-            <img className="rounded-lg" src="/profile-picture.jpg" alt="Profile" />
+        <div className="flex flex-col md:flex-row align-middle w-11/12 md:w-10/12 lg:w-8/12 xl:w-7/12 mx-auto text-black font-poppins mt-10 px-4 md:px-0">
+          <div className="h-auto w-40 md:w-52 mx-auto md:mx-0 mb-6 md:mb-0">
+            <img className="rounded-lg w-full" src="/profile-picture.jpg" alt="Profile" />
           </div>
-          <div className="flex flex-col justify-center ml-7 w-full gap-1">
-            <div className="flex justify-between">
-              <h1 className="font-bold text-2xl dark:text-white">Leuan Santos</h1>
+          <div className="flex flex-col justify-center md:ml-7 w-full gap-1">
+            <div className="flex flex-col md:flex-row md:justify-between gap-4 md:gap-0">
+              <h1 className="font-bold text-2xl dark:text-white text-center md:text-left">Leuan Santos</h1>
               <button
                 className="flex items-center justify-center gap-1 border rounded-lg px-4 py-2 text-xs hover:translate-y-[-2px] transition-transform duration-300 dark:text-white"
                 onClick={toggleDarkMode}
@@ -26,32 +26,34 @@ function App() {
                 {darkMode ? "Light Mode" : "Dark Mode"}
               </button>
             </div>
-            <p className="flex gap-1 items-center text-gray-600 text-sm">
+            <p className="flex gap-1 items-center text-gray-600 text-sm justify-center md:justify-start dark:text-white">
               <IoLocationOutline size={18} />
               Batangas, Philippines
             </p>
-            <p className="text-black text-base dark:text-white">
+            <p className="text-black text-base dark:text-white text-center md:text-left">
               College Undergraduate
             </p>
-            <div className="flex gap-2 mt-2">
+            <div className="flex gap-2 mt-2 justify-center md:justify-start">
               <button className="flex justify-center items-center gap-1 bg-black rounded-lg text-white px-4 py-2 text-xs hover:translate-y-[-2px] transition-transform duration-300 dark:bg-white dark:text-black">
                 <IoCallOutline size={15} />
                 +63 939-762-1668
               </button>
-              <button className="flex items-center justify-center gap-1 border border-gray-200 rounded-lg text-black px-3 py-2 text-xs hover:translate-y-[-2px] transition-transform duration-300 dark:text-white">
-                <IoMailOutline size={20} />
-                Send Email
-              </button>
+              <a href="mailto:santosleuan@gmail.com">
+                <button className="flex items-center justify-center gap-1 border border-gray-200 rounded-lg text-black px-3 py-2 text-xs hover:translate-y-[-2px] transition-transform duration-300 dark:text-white">
+                  <IoMailOutline size={20} />
+                  Send Email
+                </button>
+              </a>
             </div>
           </div>
         </div>
 
         {/* Grid Layout */}
-        <div className="grid grid-cols-2 gap-6 w-6/12 mx-auto mt-10 pb-10">
+        <div className="grid grid-cols-1 md:grid-cols-2 gap-6 w-11/12 md:w-10/12 lg:w-8/12 xl:w-7/12 mx-auto mt-10 pb-10 px-4 md:px-0 font-poppins">
           {/* About Section */}
-          <div className="col-span-2 bg-white rounded-lg p-6 border dark:bg-dark-111 dark:border-gray-111">
-            <h2 className="text-xl font-semibold mb-4 dark:text-white">About</h2>
-            <p className="text-black text-sm dark:text-gray-300">
+          <div className="col-span-1 md:col-span-2 bg-white rounded-lg p-6 border dark:bg-dark-111 dark:border-gray-111">
+            <h2 className="text-xl font-semibold mb-4 flex items-center gap-3 dark:text-white"> <IoBriefcaseOutline size={18}/> About</h2>
+            <p className="text-black text-sm leading-7 dark:text-gray-300">
               Aspiring web developer and undergraduate student pursuing a Bachelor
               of Science in Information Technology with interest in web development.
               Passionate about designing responsive, user-friendly websites and
@@ -62,7 +64,7 @@ function App() {
 
           {/* Education Section */}
           <div className="bg-white rounded-lg p-6 border dark:bg-dark-111 dark:border-gray-111">
-            <h2 className="text-xl font-semibold mb-4 dark:text-white">Education</h2>
+            <h2 className="text-xl font-semibold mb-4 flex items-center gap-3 dark:text-white"><IoBookOutline size={18}/>Education</h2>
             <h3 className="font-medium text-sm dark:text-white">
               Bachelor of Science in Information Technology
             </h3>
@@ -76,7 +78,7 @@ function App() {
 
           {/* Tech Stack Section */}
           <div className="bg-white rounded-lg p-6 border dark:bg-dark-111 dark:border-gray-111">
-            <h2 className="text-xl font-semibold mb-4 dark:text-white">Tech Stack</h2>
+            <h2 className="text-xl font-semibold mb-4 flex items-center gap-2 dark:text-white"> <IoBuildOutline size={18}/>Tech Stack</h2>
             <div className="space-y-4">
               <div>
                 <h3 className="font-medium mb-2 dark:text-white text-sm">Frontend Development</h3>
@@ -104,7 +106,7 @@ function App() {
           {/* Certifications Section */}
           <div className="bg-white rounded-lg p-6 border dark:bg-dark-111 dark:border-gray-111">
             <div className="flex justify-between items-center mb-4">
-              <h2 className="text-xl font-semibold dark:text-white">Certifications</h2>
+              <h2 className="text-xl font-semibold flex items-center gap-2 dark:text-white"> <IoCheckboxOutline />Certifications</h2>
               <button className="text-sm text-gray-500 hover:text-gray-700 dark:text-gray-400 dark:hover:text-gray-200">
                 See All
               </button>
@@ -126,7 +128,7 @@ function App() {
           {/* Academic Projects Section */}
           <div className="bg-white rounded-lg p-6 border dark:bg-dark-111 dark:border-gray-111">
             <div className="flex justify-between items-center mb-4">
-              <h2 className="text-xl font-semibold dark:text-white">Academic Projects</h2>
+              <h2 className="text-xl font-semibold flex items-center gap-2 dark:text-white"> <IoFolderOpenOutline size={18} />Academic Projects</h2>
               <button className="text-sm text-gray-500 hover:text-gray-700 dark:text-gray-400 dark:hover:text-gray-200">
                 See All
               </button>
@@ -155,9 +157,9 @@ function App() {
           </div>
         </div>
 
-        <div className="w-6/12 mx-auto mb-20">
-          <hr class=" border mb-10 dark:border-gray-111"/>
-          <p className="text-sm dark:text-white">@2024 Leuan Santos. All rights reserved</p>
+        <div className="w-11/12 md:w-10/12 lg:w-8/12 xl:w-6/12 mx-auto mb-20 px-4 md:px-0">
+          <hr className="border mb-10 dark:border-gray-111" />
+          <p className="text-sm dark:text-white">@2024 Leuan Santos. All rights reserved.</p>
         </div>
       </main>
     </div>
