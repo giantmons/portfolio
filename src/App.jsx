@@ -1,5 +1,5 @@
 import { useState } from "react";
-import { IoMailOutline, IoCallOutline, IoLocationOutline, IoBriefcaseOutline, IoBookOutline, IoBuildOutline, IoCheckboxOutline, IoFolderOpenOutline  } from "react-icons/io5";
+import { IoSunnyOutline, IoMoonOutline, IoMailOutline, IoCallOutline, IoLocationOutline, IoBriefcaseOutline, IoBookOutline, IoBuildOutline, IoCheckboxOutline, IoFolderOpenOutline } from "react-icons/io5";
 
 function App() {
   const [darkMode, setDarkMode] = useState(false);
@@ -20,10 +20,18 @@ function App() {
             <div className="flex flex-col md:flex-row md:justify-between gap-4 md:gap-0">
               <h1 className="font-bold text-2xl dark:text-white text-center md:text-left">Leuan Santos</h1>
               <button
-                className="flex items-center justify-center gap-1 border rounded-lg px-4 py-2 text-xs hover:translate-y-[-2px] transition-transform duration-300 dark:text-white"
+                className="mb-4 md:mb-0 flex items-center justify-center gap-1 border rounded-lg px-4 py-2 text-xs hover:translate-y-[-2px] transition-transform duration-300 dark:text-white"
                 onClick={toggleDarkMode}
               >
-                {darkMode ? "Light Mode" : "Dark Mode"}
+                {darkMode ? (
+                  <>
+                    <IoSunnyOutline size={18} />
+                  </>
+                ) : (
+                  <>
+                    <IoMoonOutline size={18} />
+                  </>
+                )}
               </button>
             </div>
             <p className="flex gap-1 items-center text-gray-600 text-sm justify-center md:justify-start dark:text-white">
@@ -49,10 +57,10 @@ function App() {
         </div>
 
         {/* Grid Layout */}
-        <div className="grid grid-cols-1 md:grid-cols-2 gap-6 w-11/12 md:w-10/12 lg:w-8/12 xl:w-7/12 mx-auto mt-10 pb-10 px-4 md:px-0 font-poppins">
+        <div className="grid grid-cols-1 md:grid-cols-3 gap-6 w-11/12 md:w-10/12 lg:w-8/12 xl:w-7/12 mx-auto mt-10 pb-10 px-4 md:px-0 font-poppins">
           {/* About Section */}
-          <div className="col-span-1 md:col-span-2 bg-white rounded-lg p-6 border dark:bg-dark-111 dark:border-gray-111">
-            <h2 className="text-xl font-semibold mb-4 flex items-center gap-3 dark:text-white"> <IoBriefcaseOutline size={18}/> About</h2>
+          <div className="col-span-1 md:col-span-2 md:row-span-1 bg-white rounded-lg p-6 border dark:bg-dark-111 dark:border-gray-111">
+            <h2 className="text-xl font-semibold mb-4 flex items-center gap-3 dark:text-white"> <IoBriefcaseOutline size={18} /> About</h2>
             <p className="text-black text-sm leading-7 dark:text-gray-300">
               Aspiring web developer and undergraduate student pursuing a Bachelor
               of Science in Information Technology with interest in web development.
@@ -62,23 +70,9 @@ function App() {
             </p>
           </div>
 
-          {/* Education Section */}
-          <div className="bg-white rounded-lg p-6 border dark:bg-dark-111 dark:border-gray-111">
-            <h2 className="text-xl font-semibold mb-4 flex items-center gap-3 dark:text-white"><IoBookOutline size={18}/>Education</h2>
-            <h3 className="font-medium text-sm dark:text-white">
-              Bachelor of Science in Information Technology
-            </h3>
-            <p className="text-black mt-1 text-sm dark:text-gray-300">
-              Batangas State University TNEU - Alangilan Campus
-            </p>
-            <p className="text-black text-sm mt-1 dark:text-gray-400">
-              Expected Graduation: 2025
-            </p>
-          </div>
-
           {/* Tech Stack Section */}
-          <div className="bg-white rounded-lg p-6 border dark:bg-dark-111 dark:border-gray-111">
-            <h2 className="text-xl font-semibold mb-4 flex items-center gap-2 dark:text-white"> <IoBuildOutline size={18}/>Tech Stack</h2>
+          <div className="bg-white rounded-lg p-6 border md:row-span-2 dark:bg-dark-111 dark:border-gray-111">
+            <h2 className="text-xl font-semibold mb-4 flex items-center gap-2 dark:text-white"> <IoBuildOutline size={18} />Tech Stack</h2>
             <div className="space-y-4">
               <div>
                 <h3 className="font-medium mb-2 dark:text-white text-sm">Frontend Development</h3>
@@ -103,8 +97,24 @@ function App() {
             </div>
           </div>
 
+          {/* Education Section */}
+          <div className="bg-white rounded-lg p-6 border md:row-span-1 md:col-span-2 dark:bg-dark-111 dark:border-gray-111">
+            <h2 className="text-xl font-semibold mb-4 flex items-center gap-3 dark:text-white"><IoBookOutline size={18} />Education</h2>
+            <h3 className="font-medium text-sm dark:text-white">
+              Bachelor of Science in Information Technology
+            </h3>
+            <p className="text-black mt-1 text-sm dark:text-gray-300">
+              Batangas State University TNEU - Alangilan Campus
+            </p>
+            <p className="text-black text-sm mt-1 dark:text-gray-400">
+              Expected Graduation: 2025
+            </p>
+          </div>
+
+
+
           {/* Certifications Section */}
-          <div className="bg-white rounded-lg p-6 border dark:bg-dark-111 dark:border-gray-111">
+          <div className="bg-white rounded-lg p-6 border  dark:bg-dark-111 dark:border-gray-111">
             <div className="flex justify-between items-center mb-4">
               <h2 className="text-xl font-semibold flex items-center gap-2 dark:text-white"> <IoCheckboxOutline />Certifications</h2>
               <button className="text-sm text-gray-500 hover:text-gray-700 dark:text-gray-400 dark:hover:text-gray-200">
@@ -126,7 +136,7 @@ function App() {
           </div>
 
           {/* Academic Projects Section */}
-          <div className="bg-white rounded-lg p-6 border dark:bg-dark-111 dark:border-gray-111">
+          <div className="bg-white rounded-lg p-6 border md:col-span-2 dark:bg-dark-111 dark:border-gray-111">
             <div className="flex justify-between items-center mb-4">
               <h2 className="text-xl font-semibold flex items-center gap-2 dark:text-white"> <IoFolderOpenOutline size={18} />Academic Projects</h2>
               <button className="text-sm text-gray-500 hover:text-gray-700 dark:text-gray-400 dark:hover:text-gray-200">
@@ -157,7 +167,7 @@ function App() {
           </div>
         </div>
 
-        <div className="w-11/12 md:w-10/12 lg:w-8/12 xl:w-6/12 mx-auto mb-20 px-4 md:px-0">
+        <div className="w-11/12 md:w-10/12 lg:w-8/12 xl:w-7/12 mx-auto mb-20 px-4 md:px-0 font-poppins">
           <hr className="border mb-10 dark:border-gray-111" />
           <p className="text-sm dark:text-white">@2024 Leuan Santos. All rights reserved.</p>
         </div>
