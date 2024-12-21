@@ -157,7 +157,7 @@ function App() {
 
         <div className="w-6/12 mx-auto mb-20">
           <hr class=" border mb-10 dark:border-gray-111"/>
-          <p className="text-sm dark:text-white">@2024 Leuan Santos. All rights reserved.</p>
+          <p className="text-sm dark:text-white">@2024 Leuan Santos. All rights reserved</p>
         </div>
       </main>
     </div>
