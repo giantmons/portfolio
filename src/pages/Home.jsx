@@ -115,10 +115,10 @@ const homePage = () => {
             <h3 className="font-medium text-sm dark:text-white">
               Bachelor of Science in Information Technology
             </h3>
-            <p className="text-black mt-1 text-sm dark:text-gray-300">
+            <p className="text-black mt-1 text-sm dark:text-white">
               Batangas State University TNEU - Alangilan Campus
             </p>
-            <p className="text-black text-sm mt-1 dark:text-gray-400">
+            <p className="text-black text-sm mt-1 dark:text-white">
               Expected Graduation: 2025
             </p>
           </div>
