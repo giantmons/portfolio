@@ -11,7 +11,7 @@ const homePage = () => {
 
   useEffect(() => {
     AOS.init({
-      duration: 800,
+      duration: 600,
       once: true,
       easing: 'ease-in-out'
     });
@@ -25,6 +25,10 @@ const homePage = () => {
 
   const goToCertifications = () => {
     navigate("/Certifications")
+  }
+
+  const goToProjects = () => {
+    navigate("/Projects")
   }
 
   return (
@@ -125,7 +129,7 @@ const homePage = () => {
 
           {/* Certifications Section */}
           <div className="bg-white rounded-lg p-6 border dark:bg-dark-111 dark:border-gray-111" 
-            data-aos="fade-up" data-aos-delay="400">
+            data-aos="fade-up" data-aos-delay="300">
             <div className="flex justify-between items-center mb-4">
               <h2 className="text-xl font-semibold flex items-center gap-2 dark:text-white"> <IoCheckboxOutline />Certifications</h2>
               <button className="text-sm text-gray-500 hover:text-gray-700 dark:text-gray-400 dark:hover:text-gray-200" onClick={goToCertifications}>
@@ -149,10 +153,10 @@ const homePage = () => {
 
           {/* Academic Projects Section */}
           <div className="bg-white rounded-lg p-6 border md:col-span-2 dark:bg-dark-111 dark:border-gray-111" 
-            data-aos="fade-up" data-aos-delay="500">
+            data-aos="fade-up" data-aos-delay="300">
             <div className="flex justify-between items-center mb-4">
               <h2 className="text-xl font-semibold flex items-center gap-2 dark:text-white"> <IoFolderOpenOutline size={18} />Academic Projects</h2>
-              <button className="text-sm text-gray-500 hover:text-gray-700 dark:text-gray-400 dark:hover:text-gray-200">
+              <button onClick={goToProjects} className="text-sm text-gray-500 hover:text-gray-700 dark:text-gray-400 dark:hover:text-gray-200">
                 See All
               </button>
             </div>
