@@ -11,7 +11,7 @@ const homePage = () => {
 
   useEffect(() => {
     AOS.init({
-      duration: 600,
+      duration: 500,
       once: true,
       easing: 'ease-in-out'
     });
@@ -129,7 +129,7 @@ const homePage = () => {
 
           {/* Certifications Section */}
           <div className="bg-white rounded-lg p-6 border dark:bg-dark-111 dark:border-gray-111" 
-            data-aos="fade-up" data-aos-delay="300">
+            data-aos="fade-up" data-aos-delay="400">
             <div className="flex justify-between items-center mb-4">
               <h2 className="text-xl font-semibold flex items-center gap-2 dark:text-white"> <IoCheckboxOutline />Certifications</h2>
               <button className="text-sm text-gray-500 hover:text-gray-700 dark:text-gray-400 dark:hover:text-gray-200" onClick={goToCertifications}>
@@ -143,7 +143,7 @@ const homePage = () => {
                 { name: "CCNA v7: Introduction to Networks", org: "CISCO" },
               ].map((cert, index) => (
                 <div key={cert.name} className="bg-gray-100 p-4 rounded-lg dark:bg-black text-sm" 
-                  data-aos="fade-up" data-aos-delay={450 + (index * 50)}>
+                  data-aos="fade-up" data-aos-delay="400">
                   <h3 className="font-medium dark:text-white">{cert.name}</h3>
                   <p className="text-gray-600 text-sm mt-1 dark:text-gray-300">{cert.org}</p>
                 </div>
@@ -153,7 +153,7 @@ const homePage = () => {
 
           {/* Academic Projects Section */}
           <div className="bg-white rounded-lg p-6 border md:col-span-2 dark:bg-dark-111 dark:border-gray-111" 
-            data-aos="fade-up" data-aos-delay="300">
+            data-aos="fade-up" data-aos-delay="500">
             <div className="flex justify-between items-center mb-4">
               <h2 className="text-xl font-semibold flex items-center gap-2 dark:text-white"> <IoFolderOpenOutline size={18} />Academic Projects</h2>
               <button onClick={goToProjects} className="text-sm text-gray-500 hover:text-gray-700 dark:text-gray-400 dark:hover:text-gray-200">
@@ -176,7 +176,7 @@ const homePage = () => {
                 },
               ].map((project, index) => (
                 <div key={project.name} className="bg-gray-100 p-4 rounded-lg dark:bg-black text-sm" 
-                  data-aos="fade-up" data-aos-delay={550 + (index * 50)}>
+                  data-aos="fade-up" data-aos-delay="500">
                   <h3 className="font-medium dark:text-white">{project.name}</h3>
                   <p className="text-gray-600 text-sm mt-1 dark:text-gray-300">{project.desc}</p>
                 </div>
