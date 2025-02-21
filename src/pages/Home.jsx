@@ -5,13 +5,14 @@ import { useNavigate } from 'react-router-dom';
 import ThemeToggle from '../components/theme';
 import AOS from 'aos';
 import 'aos/dist/aos.css';
+import Footer from '../components/footer';
 
 const homePage = () => {
   const [darkMode, setDarkMode] = useState(false);
 
   useEffect(() => {
     AOS.init({
-      duration: 500,
+      duration: 700,
       once: true,
       easing: 'ease-in-out'
     });
@@ -184,7 +185,7 @@ const homePage = () => {
             </div>
           </div>
         </div>
-
+        
         <div className="w-11/12 md:w-10/12 lg:w-8/12 xl:w-7/12 mx-auto mb-20 px-4 md:px-0 font-poppins" 
           data-aos="fade-up" data-aos-delay="600">
           <hr className="border mb-10 dark:border-gray-111" />
