@@ -3,7 +3,7 @@ import SwitchingText from '../ui/Greetings'
 
 const Splashscreen = () => {
     return (
-        <SwitchingText/>
+            <SwitchingText />
     )
 }
 

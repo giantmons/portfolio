@@ -4,28 +4,22 @@ import { IoMailOutline, IoCallOutline, IoLocationOutline, IoBriefcaseOutline, Io
 import { useNavigate } from 'react-router-dom';
 import { motion } from "framer-motion";
 import ThemeToggle from '../components/theme';
-import Footer from '../components/footer';
 
 const homePage = () => {
-  const [darkMode, setDarkMode] = useState(false);
-
-  const toggleDarkMode = () => {
-    setDarkMode(!darkMode);
-  };
+  const [darkMode] = useState(false);
 
   const navigate = useNavigate();
 
   const goToCertifications = () => {
-    navigate("/Certifications")
+    navigate("/certifications")
   }
 
   const goToProjects = () => {
-    navigate("/Projects")
+    navigate("/projects")
   }
 
   return (
     <motion.div layout
-      className={`${darkMode && "dark"}`}
       initial={{ opacity: 0, y: 1000 }}
       animate={{ opacity: 1, y: 0 }}
       transition={{ duration: 0.5, ease: "easeOut" }}

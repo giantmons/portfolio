@@ -3,18 +3,10 @@ import { motion } from "framer-motion";
 import { useNavigate } from "react-router-dom";
 
 const greetings = [
-    { text: "Hello" }, // English
-    { text: "Kumusta" }, // Cebuano
-    { text: "Hola" }, // Spanish
-    { text: "Bonjour" }, // French
-    { text: "Hallo" }, // German
-    { text: "Ciao" }, // Italian
-    { text: "こんにちは" }, // Japanese
-    { text: "안녕하세요" }, // Korean
-    { text: "你好" }, // Chinese (Mandarin)
-    { text: "Привет" }, // Russian
-    { text: "नमस्ते" }, // Hindi
-    { text: "Merhaba" }, // Turkish
+    { text: "Hello!" }, // English
+    { text: "Kumusta!" }, // Cebuano
+    { text: "Ciao!" }, // Italian
+    { text: "こんにちは!" }, // Japanese
   ];
 
 export default function SwitchingText() {
@@ -25,7 +17,7 @@ export default function SwitchingText() {
     if (index < greetings.length) {
       const timeout = setTimeout(() => {
         setIndex(index + 1);
-      }, 100);
+      }, 500);
       return () => clearTimeout(timeout);
     } else {
       navigate("/home");
