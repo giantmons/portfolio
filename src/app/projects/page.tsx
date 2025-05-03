@@ -2,19 +2,22 @@
 
 import allProjects from "@/data/project"
 import Link from 'next/link';
-import { useState } from "react";
+import { useEffect, useState } from "react";
 import { IoGlobe, IoLogoGithub } from "react-icons/io5";
 
 const Projects = () => {
     const [selectedProject, setSelectedProject] = useState<any>(null);
 
-    const openModal = (project: any) => {
-        setSelectedProject(project);
-    
-        if (typeof window !== "undefined") {
+    // This effect will run whenever selectedProject is updated
+    useEffect(() => {
+        if (selectedProject && typeof window !== "undefined") {
             const modal = document.getElementById('project-modal') as HTMLDialogElement | null;
             modal?.showModal();
         }
+    }, [selectedProject]); // Dependency array ensures this runs when selectedProject changes
+
+    const openModal = (project: any) => {
+        setSelectedProject(project);
     };
 
     return (
