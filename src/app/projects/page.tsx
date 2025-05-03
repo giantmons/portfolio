@@ -10,10 +10,12 @@ const Projects = () => {
 
     const openModal = (project: any) => {
         setSelectedProject(project);
-        const modal = document.getElementById('project-modal') as HTMLDialogElement | null;
-        modal?.showModal();
+    
+        if (typeof window !== "undefined") {
+            const modal = document.getElementById('project-modal') as HTMLDialogElement | null;
+            modal?.showModal();
+        }
     };
-
 
     return (
         <main className="flex flex-col min-h-screen bg-white font-poppins">
