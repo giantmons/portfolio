@@ -3,7 +3,7 @@
 import Stack from "@/components/stack/stack";
 import Link from 'next/link';
 import { IoLogoGithub, IoLogoLinkedin } from "react-icons/io";
-import { BookOpen, BriefcaseBusiness, FlaskConical, Folder, Mail, MedalIcon, PersonStanding} from "lucide-react";
+import { BookOpen, BriefcaseBusiness, FlaskConical, Folder, Mail, MedalIcon, PersonStanding } from "lucide-react";
 import { IoLogoInstagram } from "react-icons/io5";
 import Squares from "@/components/squares/squares";
 import Lanyard from "@/components/lanyard/lanyard";
@@ -11,6 +11,7 @@ import onePic from "@/assets/stack/one.png"
 import twoPic from "@/assets/stack/two.webp"
 import threePic from "@/assets/stack/three.webp"
 import fourPic from "@/assets/stack/four.png"
+import FadeInOnScroll from "@/components/fade-on-scroll/FadeInOnScroll";
 
 export default function Home() {
 
@@ -22,16 +23,16 @@ export default function Home() {
   ];
 
   return (
-<div className="relative bg-white min-h-screen font-poppins flex flex-col justify-center items-center overflow-x-hidden">
-    <div className="absolute z-50 xl:-left-140 -top-76 xl:-top-45 w-full h-screen">
+    <div className="relative bg-white min-h-screen font-poppins flex flex-col items-center">
+      {/* Lanyard component with controlled positioning */}
+      <div className="absolute xl:-left-140 -top-76 xl:-top-45 w-full h-full">
         <Lanyard />
-    </div>
- 
-
-
-      <div className="mt-[450px] xl:mt-0 w-11/12 ml-0 md:w-[700px] xl:w-[800px] text-black">
+      </div>
+      
+      {/* Main content container with proper spacing */}
+      <main className="w-11/12 md:w-[700px] xl:w-[760px] mt-[425px] xl:mt-[50px] pb-16 text-black relative z-50">
         {/* TITLE CONTENT */}
-        <div className="flex flex-col sm:flex-row items-center justify-center">
+        <FadeInOnScroll className="flex flex-col sm:flex-row items-center justify-center">
           {/* NAME AND DESCRIPTION */}
           <div className="order-2 mt-8 sm:order-none md:mt-0 xl:mr-36">
             <h1 className="font-bold text-4xl text-center xl:text-left">Hi, I&apos;m Leuan👋🏻</h1>
@@ -50,13 +51,13 @@ export default function Home() {
               cardsData={images}
             />
           </div>
-        </div>
+        </FadeInOnScroll>
 
         {/* GRID CONTAINER */}
         <div className="mt-6 grid grid-cols-1 sm:grid-cols-6 sm:grid-rows-12 gap-3">
 
           {/* ABOUT ME CONTAINER */}
-          <div className="sm:col-span-4 row-span-3 border border-gray-200 p-5 rounded-lg">
+          <FadeInOnScroll className="bg-white sm:col-span-4 row-span-3 border border-gray-200 p-5 rounded-lg transition hover:shadow-lg">
             <h1 className="font-semibold text-lg flex gap-2 items-center"><PersonStanding size={18} className="opacity-40" /> About</h1>
             <p className="text-sm mt-1 leading-6">I'm an aspiring software engineer with a passion for building responsive, accessible,
               and user-friendly web interfaces. I love working with modern design principles, focusing on performance, and making
@@ -68,10 +69,10 @@ export default function Home() {
               to create more full-fledged, complete applications. I'm excited about building projects from the ground up and bringing
               ideas to life through clean code and thoughtful design.
             </p>
-          </div>
+          </FadeInOnScroll>
 
           {/* WORK EXPERIENCE */}
-          <div className="sm:col-span-2 row-span-4 border border-gray-200 p-5 rounded-lg">
+          <FadeInOnScroll className="bg-white sm:col-span-2 row-span-4 border border-gray-200 p-5 rounded-lg transition hover:shadow-lg">
             <h1 className="font-semibold text-lg mb-3 flex gap-2 items-center"><BriefcaseBusiness size={18} className="opacity-40" />Experience</h1>
             <ul className="timeline timeline-vertical timeline-compact">
               <li>
@@ -103,7 +104,6 @@ export default function Home() {
                     className="h-5 w-5"
                   >
                     <path
-
                       d="M10 18a8 8 0 100-16 8 8 0 000 16zm3.857-9.809a.75.75 0 00-1.214-.882l-3.483 4.79-1.88-1.88a.75.75 0 10-1.06 1.061l2.5 2.5a.75.75 0 001.137-.089l4-5.5z"
                       clipRule="evenodd"
                     />
@@ -133,10 +133,11 @@ export default function Home() {
                 <hr className="bg-gray-100" />
               </li>
             </ul>
-          </div>
+          </FadeInOnScroll>
+
 
           {/* TECH STACK */}
-          <div className="sm:col-span-4 row-span-3 border border-gray-200 p-5 rounded-lg">
+          <FadeInOnScroll className="bg-white sm:col-span-4 row-span-3 border border-gray-200 p-5 rounded-lg transition hover:shadow-lg">
             <h1 className="font-semibold text-lg flex gap-2 items-center"><FlaskConical size={18} className="opacity-40" />Tech Stack</h1>
             <h2 className="text-sm mt-2">Frontend Development:</h2>
             <div className="flex flex-wrap gap-1 mt-2">
@@ -166,17 +167,19 @@ export default function Home() {
               <div className="badge badge-sm bg-transparent text-black border-gray-300">Trello</div>
               <div className="badge badge-sm bg-transparent text-black border-gray-300">OpenProject</div>
             </div>
-          </div>
+          </FadeInOnScroll>
 
-          <div className="row-span-2 sm:col-span-2 p-5 border border-gray-200 rounded-lg">
+          {/* BEYOND CODING */}
+          <FadeInOnScroll className="bg-white row-span-2 sm:col-span-2 p-5 border border-gray-200 rounded-lg transition hover:shadow-lg">
             <h1 className="font-semibold flex gap-2 items-center"><BookOpen size={18} className="opacity-40" />Beyond Coding</h1>
             <p className="text-sm mt-3 leading-6">When I'm not writing code, I'm busy stretching my skills and staying curious about everything tech and beyond.</p>
             <div className="flex">
               <p className="text-sm mt-3">Other than that, I sleep.</p>
             </div>
-          </div>
+          </FadeInOnScroll>
 
-          <div className="row-span-3 sm:col-span-2 border border-gray-200 rounded-lg p-5">
+          {/* CONTACT INFORMATION */}
+          <FadeInOnScroll className="bg-white row-span-3 sm:col-span-2 border border-gray-200 rounded-lg p-5 transition hover:shadow-lg">
             <h1 className="font-semibold flex gap-2 items-center"><Mail size={18} className="opacity-40" />Contact</h1>
 
             <a href="mailto:santosleuan@gmail.com">
@@ -199,16 +202,16 @@ export default function Home() {
                 <a href="https://github.com/giantmons"><button className="btn"><IoLogoGithub size={24} /></button></a>
               </div>
             </div>
-          </div>
+          </FadeInOnScroll>
 
-
-          <div className="sm:col-span-4 row-span-3 border border-gray-200 rounded-lg p-5">
+          {/* RECENT PROJECTS */}
+          <FadeInOnScroll className="bg-white sm:col-span-4 row-span-3 border border-gray-200 rounded-lg p-5 transition hover:shadow-lg">
             <div className="flex justify-between items-center">
               <h1 className="font-semibold flex gap-2 items-center"><Folder size={18} className="opacity-40" />Recent Projects</h1>
               <Link href={"/projects"}><p className="text-xs text-gray-500 cursor-pointer">See more</p></Link>
             </div>
 
-            <div className="grid  grid-rows-2 gap-3 mt-3">
+            <div className="grid grid-rows-2 gap-3 mt-3">
               <div className="border border-gray-200 p-3 rounded-lg">
                 <h2 className="text-sm font-medium">Taskly</h2>
                 <p className="text-xs text-gray-400">a todo list web application</p>
@@ -226,28 +229,30 @@ export default function Home() {
                 <p className="text-xs text-gray-400">a crowd monitoring system</p>
               </div>
             </div>
+          </FadeInOnScroll>
 
-          </div>
+          {/* GET IN TOUCH */}
+          <FadeInOnScroll className="sm:col-span-4 row-span-3 relative border border-gray-200 rounded-lg p-5 flex justify-center items-center overflow-hidden transition hover:shadow-lg">
+            <h1 className="font-extrabold text-4xl relative z-10">Get in Touch</h1>
+            <div className="absolute inset-0 z-0">
+              <Squares
+                speed={0.5}
+                squareSize={40}
+                direction='diagonal'
+                borderColor='black'
+                hoverFillColor='#222'
+              />
+            </div>
+          </FadeInOnScroll>
 
-
-          <div className="relative sm:col-span-4 row-span-3 border border-gray-200 rounded-lg p-5 flex justify-center items-center">
-            <h1 className="font-extrabold text-4xl">Get in Touch</h1>
-            <Squares
-              speed={0.5}
-              squareSize={40}
-              direction='diagonal' // up, down, left, right, diagonal
-              borderColor='black'
-              hoverFillColor='#222'
-            />
-          </div>
-
-          <div className="sm:col-span-2 row-span-3 border border-gray-200 rounded-lg p-5">
+          {/* CERTIFICATIONS */}
+          <FadeInOnScroll className="sm:col-span-2 row-span-3 border border-gray-200 rounded-lg p-5 transition hover:shadow-lg">
             <div className="flex justify-between items-center">
               <h1 className="font-semibold flex gap-2 items-center"><MedalIcon size={18} className="opacity-40" />Certifications</h1>
               <Link href={"/certifications"}><p className="text-xs text-gray-500 cursor-pointer">See more</p></Link>
             </div>
 
-            <div className="grid  gap-3 mt-3">
+            <div className="grid gap-3 mt-3">
               <div className="border border-gray-200 p-3 rounded-lg">
                 <h2 className="text-sm font-medium">Web Developer Bootcamp</h2>
                 <p className="text-xs text-gray-400">Udemy</p>
@@ -265,18 +270,15 @@ export default function Home() {
                 <p className="text-xs text-gray-400">CISCO</p>
               </div>
             </div>
-          </div>
-
+          </FadeInOnScroll>
         </div>
 
-
-
-        <div className="h-32 mt-16">
+        <footer className="mt-16 pb-8">
           <hr className="text-gray-200" />
           <p className="mt-6 text-sm">@2025 Leuan Santos. All rights Reserved</p>
-        </div>
-      </div>
+        </footer>
+
+      </main>
     </div>
   );
 }
-

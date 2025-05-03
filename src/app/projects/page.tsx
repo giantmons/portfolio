@@ -1,5 +1,6 @@
 "use client"
 
+import FadeInOnScroll from "@/components/fade-on-scroll/FadeInOnScroll";
 import allProjects from "@/data/project"
 import Link from 'next/link';
 import { useEffect, useState } from "react";
@@ -27,18 +28,18 @@ const Projects = () => {
 
     return (
         <main className="flex flex-col min-h-screen bg-white font-poppins">
-            <div className="w-11/12 md:w-[800px] mx-auto flex items-center justify-start mt-8 gap-6">
+            <FadeInOnScroll className="w-11/12 md:w-[800px] mx-auto flex items-center justify-start mt-8 gap-6">
                 <Link href="/">
                     <button className="text-sm text-black cursor-pointer">Back to Home</button>
                 </Link>
                 <h1 className="text-2xl font-semibold text-black">Recent Projects</h1>
-            </div>
+            </FadeInOnScroll>
 
             <div className="w-11/12 md:w-[800px] mx-auto mt-8">
                 {/* Grid container for projects */}
                 <div className="grid grid-cols-1 sm:grid-cols-2 gap-8 gap-x-4 gap-y-4">
                     {allProjects.map((project) => (
-                        <div key={project.title} className="flex flex-col gap-2 hover:scale-101 transition cursor-pointer"
+                        <FadeInOnScroll key={project.title} className="flex flex-col gap-2 hover:scale-101 transition cursor-pointer"
                             onClick={() => openModal(project)}>
                             <div className="w-full h-auto bg-gray-100 rounded-lg max-h-[240px]">
                                 <img className="w-full object-cover rounded-lg" src={project.image} alt={project.title} />
@@ -47,7 +48,7 @@ const Projects = () => {
                                 <h1 className="text-sm text-center text-black">{project.title}</h1>
                                 <p className="text-xs text-center text-black">{project.description}</p>
                             </div>
-                        </div>
+                        </FadeInOnScroll>
                     ))}
                 </div>
 
