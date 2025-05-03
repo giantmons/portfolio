@@ -318,9 +318,9 @@ function Band({ maxSpeed = 50, minSpeed = 0 }: BandProps) {
         </RigidBody>
       </group>
       <mesh ref={band}>
-        {/* @ts-expect-error */}
+        {/* @ts-expect-error: meshLineGeometry is a custom JSX element not recognized by TypeScript */}
         <meshLineGeometry />
-        {/* @ts-expect-error */}
+        {/* @ts-expect-error: meshLineMaterial is a custom JSX element not recognized by TypeScript */}
         <meshLineMaterial
           color="white"
           depthTest={false}
