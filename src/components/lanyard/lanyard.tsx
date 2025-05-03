@@ -40,7 +40,7 @@ export default function Lanyard({
     <div className="relative z-50 w-full h-[900px] flex justify-center items-center transform scale-100 origin-center">
       <Canvas
         camera={{ position, fov }}
-        gl={{ 
+        gl={{
           alpha: transparent,
           antialias: true, // Enable antialiasing
           preserveDrawingBuffer: true, // Better quality for screenshots
@@ -117,9 +117,9 @@ function Band({ maxSpeed = 50, minSpeed = 0 }: BandProps) {
     linearDamping: 4,
   };
 
-  
+
   const { nodes, materials } = useGLTF("/lanyard/card.glb") as any;
-  
+
   // Load textures with high quality settings
   const texture = useTexture("/lanyard/lanyard.png", (loadedTexture) => {
     if (Array.isArray(loadedTexture)) {
@@ -134,7 +134,7 @@ function Band({ maxSpeed = 50, minSpeed = 0 }: BandProps) {
       loadedTexture.needsUpdate = true;
     }
   });
-  
+
   // Higher resolution for the card texture if it exists
   useEffect(() => {
     if (materials.base && materials.base.map) {
@@ -221,12 +221,12 @@ function Band({ maxSpeed = 50, minSpeed = 0 }: BandProps) {
       curve.points[1].copy(j2.current.lerped);
       curve.points[2].copy(j1.current.lerped);
       curve.points[3].copy(fixed.current.translation());
-      
+
       if (band.current && band.current.geometry) {
         // Safely access geometry and call setPoints
         (band.current.geometry as any).setPoints(curve.getPoints(32));
       }
-      
+
       ang.copy(card.current.angvel());
       rot.copy(card.current.rotation());
       card.current.setAngvel({ x: ang.x, y: ang.y - rot.y * 0.25, z: ang.z });
@@ -318,17 +318,20 @@ function Band({ maxSpeed = 50, minSpeed = 0 }: BandProps) {
         </RigidBody>
       </group>
       <mesh ref={band}>
+        {/* @ts-ignore */}
         <meshLineGeometry />
+        {/* @ts-ignore */}
         <meshLineMaterial
           color="white"
           depthTest={false}
-          resolution={isSmall ? [2000, 4000] : [2000, 2000]}  // Doubled resolution
+          resolution={isSmall ? [2000, 4000] : [2000, 2000]} // Doubled resolution
           useMap
           map={texture}
           repeat={[-4, 1]}
           lineWidth={1}
         />
       </mesh>
+
     </>
   );
 }
