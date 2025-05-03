@@ -5,7 +5,7 @@ import Link from 'next/link';
 import sleepAnimation from "../../public/lottie/sleeping.json"
 import { IoLogoGithub, IoLogoLinkedin } from "react-icons/io";
 import { useLottie } from "lottie-react";
-import { BookOpen, Briefcase, BriefcaseBusiness, FlaskConical, Folder, GithubIcon, InstagramIcon, Linkedin, LinkedinIcon, LucideGithub, Mail, MedalIcon, PersonStanding, PersonStandingIcon } from "lucide-react";
+import { BookOpen, BriefcaseBusiness, FlaskConical, Folder, Mail, MedalIcon, PersonStanding} from "lucide-react";
 import { IoLogoInstagram } from "react-icons/io5";
 import Squares from "@/components/squares/squares";
 import Lanyard from "@/components/lanyard/lanyard";
@@ -43,7 +43,7 @@ export default function Home() {
         <div className="flex flex-col sm:flex-row items-center justify-center">
           {/* NAME AND DESCRIPTION */}
           <div className="order-2 mt-8 sm:order-none md:mt-0 xl:mr-36">
-            <h1 className="font-bold text-4xl text-center xl:text-left">Hi, I'm Leuan👋🏻</h1>
+            <h1 className="font-bold text-4xl text-center xl:text-left">Hi, I&apos;m Leuan👋🏻</h1>
             <p className="text-sm leading-6 text-center xl:text-left">Frontend Developer. I love bringing my ideas to code,
               but not when bugs get creative too.
             </p>
