@@ -7,14 +7,19 @@ import { IoGlobe, IoLogoGithub } from "react-icons/io5";
 
 const Projects = () => {
     const [selectedProject, setSelectedProject] = useState<any>(null);
+    const [isMounted, setIsMounted] = useState(false);
+
+    useEffect(() => {
+        setIsMounted(true);
+    }, []);
 
     useEffect(() => {
         // This code will run only on the client-side (after the component has mounted)
-        if (typeof window !== 'undefined' && selectedProject) {
+        if (isMounted && selectedProject) {
             const modal = document.getElementById('project-modal') as HTMLDialogElement | null;
             modal?.showModal();
         }
-    }, [selectedProject]); // Effect runs when selectedProject changes
+    }, [selectedProject, isMounted]); // Effect runs when selectedProject changes
 
     const openModal = (project: any) => {
         setSelectedProject(project);
@@ -46,26 +51,28 @@ const Projects = () => {
                     ))}
                 </div>
 
-                {/* Modal */}
-                <dialog id="project-modal" className="modal">
-                    <div className="modal-box bg-white text-black">
-                        <form method="dialog">
-                            <button className="btn btn-sm btn-circle btn-ghost absolute right-2 top-2">✕</button>
-                        </form>
-                        {selectedProject && (
-                            <>
-                                <div className="flex flex-col justify-center items-center mt-3">
-                                    <img src={selectedProject.image} alt={selectedProject.title} />
-                                    <h3 className="font-light text-sm">{selectedProject.title}</h3>
-                                    <div className="mt-3 flex justify-center items-center gap-2">
-                                        {selectedProject.link ? <a href={selectedProject.link}><button className="btn text-xs font-light"><IoGlobe size={24} /> Website</button></a> : ""}
-                                        {selectedProject.github ? <a href={selectedProject.github}><button className="btn text-xs font-light"><IoLogoGithub size={24} /> Source</button></a> : ""}
+                {/* Modal - only render if client-side */}
+                {isMounted && (
+                    <dialog id="project-modal" className="modal">
+                        <div className="modal-box bg-white text-black">
+                            <form method="dialog">
+                                <button className="btn btn-sm btn-circle btn-ghost absolute right-2 top-2">✕</button>
+                            </form>
+                            {selectedProject && (
+                                <>
+                                    <div className="flex flex-col justify-center items-center mt-3">
+                                        <img src={selectedProject.image} alt={selectedProject.title} />
+                                        <h3 className="font-light text-sm">{selectedProject.title}</h3>
+                                        <div className="mt-3 flex justify-center items-center gap-2">
+                                            {selectedProject.link ? <a href={selectedProject.link}><button className="btn text-xs font-light"><IoGlobe size={24} /> Website</button></a> : ""}
+                                            {selectedProject.github ? <a href={selectedProject.github}><button className="btn text-xs font-light"><IoLogoGithub size={24} /> Source</button></a> : ""}
+                                        </div>
                                     </div>
-                                </div>
-                            </>
-                        )}
-                    </div>
-                </dialog>
+                                </>
+                            )}
+                        </div>
+                    </dialog>
+                )}
 
                 <div className="mt-20 w-full mx-auto mb-20 px-4 md:px-0 font-poppins">
                     <hr className="border border-gray-200 mb-10 text-black" />

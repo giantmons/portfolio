@@ -2,9 +2,7 @@
 
 import Stack from "@/components/stack/stack";
 import Link from 'next/link';
-import sleepAnimation from "../../public/lottie/sleeping.json"
 import { IoLogoGithub, IoLogoLinkedin } from "react-icons/io";
-import { useLottie } from "lottie-react";
 import { BookOpen, BriefcaseBusiness, FlaskConical, Folder, Mail, MedalIcon, PersonStanding} from "lucide-react";
 import { IoLogoInstagram } from "react-icons/io5";
 import Squares from "@/components/squares/squares";
@@ -22,13 +20,6 @@ export default function Home() {
     { id: 3, img: threePic.src },
     { id: 4, img: onePic.src }
   ];
-
-  const defaultOptions = {
-    animationData: sleepAnimation,
-    loop: true,
-  };
-
-  const { View } = useLottie(defaultOptions);
 
   return (
 <div className="relative bg-white min-h-screen font-poppins flex flex-col justify-center items-center overflow-x-hidden">
@@ -182,7 +173,6 @@ export default function Home() {
             <p className="text-sm mt-3 leading-6">When I'm not writing code, I'm busy stretching my skills and staying curious about everything tech and beyond.</p>
             <div className="flex">
               <p className="text-sm mt-3">Other than that, I sleep.</p>
-              <div className="h-[24px] w-[24px]">{View}</div>
             </div>
           </div>
 
