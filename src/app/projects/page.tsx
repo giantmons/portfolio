@@ -8,13 +8,13 @@ import { IoGlobe, IoLogoGithub } from "react-icons/io5";
 const Projects = () => {
     const [selectedProject, setSelectedProject] = useState<any>(null);
 
-    // This effect will run whenever selectedProject is updated
     useEffect(() => {
-        if (selectedProject && typeof window !== "undefined") {
+        // This code will run only on the client-side (after the component has mounted)
+        if (typeof window !== 'undefined' && selectedProject) {
             const modal = document.getElementById('project-modal') as HTMLDialogElement | null;
             modal?.showModal();
         }
-    }, [selectedProject]); // Dependency array ensures this runs when selectedProject changes
+    }, [selectedProject]); // Effect runs when selectedProject changes
 
     const openModal = (project: any) => {
         setSelectedProject(project);

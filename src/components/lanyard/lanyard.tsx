@@ -182,14 +182,14 @@ function Band({ maxSpeed = 50, minSpeed = 0 }: BandProps) {
   ]);
 
   useEffect(() => {
-    if (hovered) {
+    if (typeof window !== "undefined" && hovered) {
       document.body.style.cursor = dragged ? "grabbing" : "grab";
       return () => {
         document.body.style.cursor = "auto";
       };
     }
   }, [hovered, dragged]);
-
+  
   useFrame((state, delta) => {
     if (dragged && typeof dragged !== "boolean") {
       vec.set(state.pointer.x, state.pointer.y, 0.5).unproject(state.camera);
