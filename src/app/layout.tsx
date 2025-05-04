@@ -2,6 +2,7 @@ import type { Metadata } from "next";
 import { Poppins } from 'next/font/google';
 import "./globals.css";
 import { Analytics } from "@vercel/analytics/react"
+import { ThemeProvider } from "@/components/theme/theme-context";
 
 // Configure the font (you can set weight, subsets, style, etc.)
 const poppins = Poppins({
@@ -23,10 +24,11 @@ export default function RootLayout({
   return (
     <html lang="en">
       <Analytics />
-      <body
-        className={`${poppins.className}`}
-      >
-        {children}
+      <body className={`${poppins.className}`}>
+        <ThemeProvider>
+          {children}
+        </ThemeProvider>
+
       </body>
     </html>
   );

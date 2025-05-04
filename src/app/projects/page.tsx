@@ -27,12 +27,12 @@ const Projects = () => {
     };
 
     return (
-        <main className="flex flex-col min-h-screen bg-white font-poppins">
-            <FadeInOnScroll className="w-11/12 md:w-[800px] mx-auto flex items-center justify-start mt-8 gap-6">
+        <main className="flex flex-col min-h-screen bg-white dark:bg-black font-poppins">
+            <FadeInOnScroll className="w-11/12 md:w-[800px] mx-auto dark:text-white flex items-center justify-start mt-8 gap-6">
                 <Link href="/">
-                    <button className="text-sm text-black cursor-pointer">Back to Home</button>
+                    <button className="text-sm text-black dark:text-white cursor-pointer">Back to Home</button>
                 </Link>
-                <h1 className="text-2xl font-semibold text-black">Recent Projects</h1>
+                <h1 className="text-2xl font-semibold text-black dark:text-white">Recent Projects</h1>
             </FadeInOnScroll>
 
             <div className="w-11/12 md:w-[800px] mx-auto mt-8">
@@ -41,12 +41,12 @@ const Projects = () => {
                     {allProjects.map((project) => (
                         <FadeInOnScroll key={project.title} className="flex flex-col gap-2 hover:scale-101 transition cursor-pointer"
                             onClick={() => openModal(project)}>
-                            <div className="w-full h-auto bg-gray-100 rounded-lg max-h-[240px]">
+                            <div className="w-full h-auto bg-gray-100 dark:bg-[#111111] rounded-lg max-h-[240px]">
                                 <img className="w-full object-cover rounded-lg" src={project.image} alt={project.title} />
                             </div>
-                            <div className="p-4 border border-gray-200 w-full rounded-lg">
-                                <h1 className="text-sm text-center text-black">{project.title}</h1>
-                                <p className="text-xs text-center text-black">{project.description}</p>
+                            <div className="p-4 dark:bg-[#111111] border border-gray-200 dark:border-[#333333] w-full rounded-lg">
+                                <h1 className="text-sm text-center text-black dark:text-white">{project.title}</h1>
+                                <p className="text-xs text-center text-black dark:text-white">{project.description}</p>
                             </div>
                         </FadeInOnScroll>
                     ))}
@@ -55,7 +55,7 @@ const Projects = () => {
                 {/* Modal - only render if client-side */}
                 {isMounted && (
                     <dialog id="project-modal" className="modal">
-                        <div className="modal-box bg-white text-black">
+                        <div className="modal-box bg-white text-black dark:text-white dark:bg-[#111111] border border-gray-300 dark:border-[#333333]">
                             <form method="dialog">
                                 <button className="btn btn-sm btn-circle btn-ghost absolute right-2 top-2">✕</button>
                             </form>
@@ -66,7 +66,7 @@ const Projects = () => {
                                         <h3 className="font-light text-sm">{selectedProject.title}</h3>
                                         <div className="flex gap-1 flex-wrap justify-center items-center">
                                             {selectedProject.stack.map((tech: string, index: number) => (
-                                                <div key={index} className="badge badge-sm bg-transparent text-black border-gray-300">
+                                                <div key={index} className="badge badge-sm bg-transparent text-black dark:text-white border-gray-300">
                                                     {tech}
                                                 </div>
                                             ))}
@@ -83,8 +83,8 @@ const Projects = () => {
                 )}
 
                 <div className="mt-20 w-full mx-auto mb-20 px-4 md:px-0 font-poppins">
-                    <hr className="border border-gray-200 mb-10 text-black" />
-                    <p className="text-sm text-black">@2025 Leuan Santos. All rights reserved.</p>
+                <hr className="mb-8 text-gray-200 dark:text-[#333333]" />
+                    <p className="text-sm text-black dark:text-white">@2025 Leuan Santos. All rights reserved.</p>
                 </div>
             </div>
         </main>
