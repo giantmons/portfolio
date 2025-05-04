@@ -156,6 +156,8 @@ export default function Home() {
               <div className="badge badge-sm bg-transparent text-black border-gray-300">Express</div>
               <div className="badge badge-sm bg-transparent text-black border-gray-300">MongoDB</div>
               <div className="badge badge-sm bg-transparent text-black border-gray-300">PostgreSQL</div>
+              <div className="badge badge-sm bg-transparent text-black border-gray-300">REST API</div>
+              <div className="badge badge-sm bg-transparent text-black border-gray-300">JWT</div>
             </div>
 
             <h2 className="text-sm mt-3">Tools and Platforms:</h2>

@@ -61,9 +61,16 @@ const Projects = () => {
                             </form>
                             {selectedProject && (
                                 <>
-                                    <div className="flex flex-col justify-center items-center mt-3">
+                                    <div className="flex flex-col gap-3 justify-center items-center mt-3">
                                         <img src={selectedProject.image} alt={selectedProject.title} />
                                         <h3 className="font-light text-sm">{selectedProject.title}</h3>
+                                        <div className="flex gap-1 flex-wrap justify-center items-center">
+                                            {selectedProject.stack.map((tech: string, index: number) => (
+                                                <div key={index} className="badge badge-sm bg-transparent text-black border-gray-300">
+                                                    {tech}
+                                                </div>
+                                            ))}
+                                        </div>
                                         <div className="mt-3 flex justify-center items-center gap-2">
                                             {selectedProject.link ? <a href={selectedProject.link}><button className="btn text-xs font-light"><IoGlobe size={24} /> Website</button></a> : ""}
                                             {selectedProject.github ? <a href={selectedProject.github}><button className="btn text-xs font-light"><IoLogoGithub size={24} /> Source</button></a> : ""}
