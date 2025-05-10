@@ -10,25 +10,11 @@ import Certifications from "@/components/homepage/Certifications";
 import GetInTouch from "@/components/homepage/GetInTouch";
 import Footer from "@/components/homepage/Footer";
 import Title from "@/components/homepage/Title";
-import Head from "next/head";
 
 export default function Home() {
 
   return (
     <>
-      <Head>
-        <title>Leuan Santos | Frontend Developer</title>
-<meta name="google-site-verification" content="OZW8Q8yRF3NZZYPi-m6ByzDSRQ5dId5-s-7b9uIqsdo" />
-        <meta name="description" content="Hi! Im Leuan, a frontend developer passionate about building user-centric web experiences." />
-        <meta name="keywords" content="Frontend Developer, Portfolio, React, Next.js, JavaScript, Tailwind CSS" />
-        <meta name="author" content="Leuan Santos" />
-        <meta property="og:title" content="Leuan Santos | Frontend Developer" />
-        <meta property="og:description" content="Explore my projects, skills, and work experience in web development." />
-        {/* <meta property="og:image" content="/images/og-image.png" /> */}
-        <meta property="og:url" content="https://leuansantos.vercel.app/" />
-        <link rel="canonical" href="https://leuansantos.vercel.app/" />
-      </Head>
-
       <div className="relative bg-white dark:bg-black min-h-screen font-poppins flex flex-col items-center">
 
         {/* Lanyard component with controlled positioning */}
