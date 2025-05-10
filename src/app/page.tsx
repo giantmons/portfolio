@@ -28,7 +28,7 @@ export default function Home() {
         <Title />
 
         {/* GRID CONTAINER */}
-        <div className="mt-6 grid grid-cols-1 sm:grid-cols-6 sm:grid-rows-12 gap-3">
+        <div className="mt-6 grid grid-cols-1 sm:grid-cols-6 sm:grid-rows-12 gap-2">
 
           {/* ABOUT ME CONTAINER */}
           <About />

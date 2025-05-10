@@ -15,6 +15,8 @@ const TechStack = () => {
                 <div className="badge badge-sm bg-transparent text-black dark:text-white border-gray-300">JavaScript</div>
                 <div className="badge badge-sm bg-transparent text-black dark:text-white border-gray-300">TypeScript</div>
                 <div className="badge badge-sm bg-transparent text-black dark:text-white border-gray-300">NextJS</div>
+                <div className="badge badge-sm bg-transparent text-black dark:text-white border-gray-300">Dart</div>
+                <div className="badge badge-sm bg-transparent text-black dark:text-white border-gray-300">Flutter</div>
             </div>
 
             <h2 className="text-sm mt-3">Backend Development:</h2>

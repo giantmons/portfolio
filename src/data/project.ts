@@ -4,9 +4,19 @@ const allProjects = [
         description: 'A To-do list app',
         image: '/project-taskly.png',
         github: 'https://github.com/giantmons/todo',
-        link: 'https://todo-orcin-nine-81.vercel.app/',
+        link: 'https://taskly-byleuan.vercel.app/',
             stack: [
-                'ReactJS', 'TypeScript', 'TailwindCSS', 'Express', 'NodeJS', 'MongoDB', 'JWT'
+                'ReactJS', 'TypeScript', 'TailwindCSS', 'ShadCN', 'Express', 'NodeJS', 'MongoDB', 'JWT',
+            ]
+    },
+    {
+        title: 'Online Porfolio',
+        description: 'Everything about me and beyond',
+        image: '/project-portfolio.png',
+        github: 'https://github.com/giantmons/portfolio',
+        link: '/',
+            stack: [
+                'NextJS', 'TypeScript', 'TailwindCSS', 'ThreeJS', 'DaisyUI'
             ]
     },
     {
