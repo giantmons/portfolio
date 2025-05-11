@@ -22,7 +22,7 @@ const WorkExperience = () => {
                         </svg>
                     </div>
                     <div className="timeline-start timeline-box bg-transparent border-gray-200 w-full text-xs">Frontend Developer</div>
-                    <div className="timeline-end text-xs"> Center for Artificial Intelligence and Smart Technologies <br /> <span className="badge badge-xs mt-2 bg-transparent text-black dark:text-white border-gray-300">2025</span></div>
+                    <div className="timeline-end text-xs">CAIST - BatStateU TNEU<br /> <span className="badge badge-xs mt-2 bg-transparent text-black dark:text-white border-gray-300">2025</span></div>
                     <hr className="bg-gray-100" />
                 </li>
                 <li>

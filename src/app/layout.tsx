@@ -8,6 +8,7 @@ import { ThemeProvider } from "@/components/theme/theme-context";
 const poppins = Poppins({
   subsets: ['latin'],
   weight: ['400', '500', '700'],
+  display: 'swap',
   variable: '--font-poppins',
 });
 

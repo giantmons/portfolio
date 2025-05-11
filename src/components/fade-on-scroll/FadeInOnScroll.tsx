@@ -1,4 +1,4 @@
-// components/FadeInOnScroll.tsx
+"use client"
 import { useRef } from "react";
 import { motion, useInView } from "framer-motion";
 import type { HTMLMotionProps } from "framer-motion";
@@ -14,9 +14,9 @@ const FadeInOnScroll = ({ children, className, ...rest }: FadeInOnScrollProps) =
   return (
 <motion.div
   ref={ref}
-  initial={{ opacity: 0, y: 50, filter: "blur(20px)" }}
+  initial={{ opacity: 0, y: 0, filter: "blur(40px)" }}
   animate={isInView ? { opacity: 1, y: 0, filter: "blur(0px)" } : {}}
-  transition={{ duration: 0.8, ease: "easeOut" }}
+  transition={{ duration: 0.7}}
   className={className}
   {...rest}
 >

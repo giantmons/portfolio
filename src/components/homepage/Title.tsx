@@ -1,3 +1,4 @@
+"use client"
 import FadeInOnScroll from "../fade-on-scroll/FadeInOnScroll";
 import Stack from "../stack/stack";
 import { useTheme } from "@/components/theme/theme-context";

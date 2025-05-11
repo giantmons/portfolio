@@ -1,4 +1,3 @@
-"use client"
 import Lanyard from "@/components/lanyard/lanyard";
 import About from "@/components/homepage/About";
 import WorkExperience from "@/components/homepage/WorkExperience";
