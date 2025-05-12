@@ -122,6 +122,8 @@ export default function Stack({
               <Image
                 src={card.img}
                 alt={`card-${card.id}`}
+                width={200}
+                height={200}
                 className="w-full h-full object-cover pointer-events-none"
               />
             </motion.div>

@@ -2,7 +2,13 @@
 
 import FadeInOnScroll from "@/components/fade-on-scroll/FadeInOnScroll"
 import allCertificates from "@/data/certifications"
+import { Metadata } from "next";
 import Link from "next/link"
+
+export const metadata: Metadata = {
+  title: "Certifications",
+  description: "Explore all my certifications",
+};
 
 const certifications = () => {
 

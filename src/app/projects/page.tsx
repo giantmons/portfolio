@@ -2,9 +2,16 @@
 
 import FadeInOnScroll from "@/components/fade-on-scroll/FadeInOnScroll";
 import allProjects from "@/data/project"
+import { Metadata } from "next";
 import Link from 'next/link';
 import { useEffect, useState } from "react";
 import { IoGlobe, IoLogoGithub } from "react-icons/io5";
+
+export const metadata: Metadata = {
+  title: "Projects",
+  description: "Explore my Web Development Projects",
+};
+
 
 const Projects = () => {
     const [selectedProject, setSelectedProject] = useState<any>(null);
