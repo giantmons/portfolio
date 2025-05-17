@@ -8,14 +8,14 @@ import fourPic from "@/assets/stack/four.png"
 import ThemeController from "../theme/theme-controller";
 
 const Title = () => {
-
-    const images = [
-        { id: 1, img: fourPic.src, width: fourPic.width || 200, height: fourPic.height || 200 },
-        { id: 2, img: twoPic.src, width: twoPic.width || 200, height: twoPic.height || 200 },
-        { id: 3, img: threePic.src, width: threePic.width || 200, height: threePic.height || 200 },
-        { id: 4, img: onePic.src, width: onePic.width || 200, height: onePic.height || 200 }
-    ];
     
+      const images: { id: number; img: string }[] = [
+        { id: 1, img: fourPic.src },
+        { id: 2, img: twoPic.src },
+        { id: 3, img: threePic.src },
+        { id: 4, img: onePic.src }
+      ];
+
     return <>
         <FadeInOnScroll className="flex flex-col sm:flex-row items-center justify-center">
             {/* NAME AND DESCRIPTION */}
@@ -25,6 +25,7 @@ const Title = () => {
                     but not when bugs get creative too.
                 </p>
                 <ThemeController />
+
             </div>
 
             {/* STACK COMPONENT */}

@@ -1,6 +1,5 @@
 "use client"
 import { motion, useMotionValue, useTransform } from "framer-motion";
-import Image from "next/image";
 import { useState } from "react";
 
 interface CardRotateProps {
@@ -119,7 +118,7 @@ export default function Stack({
                 height: cardDimensions.height,
               }}
             >
-              <Image
+              <img
                 src={card.img}
                 alt={`card-${card.id}`}
                 width={200}
