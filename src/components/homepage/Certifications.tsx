@@ -4,10 +4,10 @@ import { MedalIcon } from "lucide-react"
 
 const Certifications = () => {
     return <>
-        <FadeInOnScroll className="dark:text-white dark:bg-[#111111] dark:border-[#333333] sm:col-span-2 row-span-3 border border-gray-200 rounded-lg p-5 transition hover:shadow-lg">
+        <FadeInOnScroll className="dark:text-white dark:bg-[#111111] dark:border-[#333333] sm:col-span-2 row-span-3 border border-gray-200 rounded-lg p-5 transition hover:shadow-sm">
             <div className="flex justify-between items-center">
                 <h1 className="font-semibold flex gap-2 items-center"><MedalIcon size={18} className="opacity-40" />Certifications</h1>
-                <Link href={"/certifications"}><p className="text-xs text-gray-500 cursor-pointer">See more</p></Link>
+                <Link href={"/certifications"}><p className="text-xs text-gray-500 cursor-pointer">View All</p></Link>
             </div>
 
             <div className="grid gap-3 mt-3">

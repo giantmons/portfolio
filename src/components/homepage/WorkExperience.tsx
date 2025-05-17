@@ -3,7 +3,7 @@ import FadeInOnScroll from "../fade-on-scroll/FadeInOnScroll"
 
 const WorkExperience = () => {
     return <>
-        <FadeInOnScroll className="bg-white dark:bg-[#111111] dark:border-[#333333] dark:text-white sm:col-span-2 row-span-4 border border-gray-200 p-5 rounded-lg transition hover:shadow-lg">
+        <FadeInOnScroll className="bg-white dark:bg-[#111111] dark:border-[#333333] dark:text-white sm:col-span-2 row-span-4 border border-gray-200 p-5 rounded-lg transition hover:shadow-sm">
             <h1 className="font-semibold text-lg mb-3 flex gap-2 items-center"><BriefcaseBusiness size={18} className="opacity-40" />Experience</h1>
             <ul className="timeline timeline-vertical timeline-compact">
                 <li>
@@ -31,7 +31,7 @@ const WorkExperience = () => {
                         <svg
                             xmlns="http://www.w3.org/2000/svg"
                             viewBox="0 0 20 20"
-                            fill="currentColor"
+                            fill="gray"
                             className="h-5 w-5"
                         >
                             <path
@@ -50,7 +50,7 @@ const WorkExperience = () => {
                         <svg
                             xmlns="http://www.w3.org/2000/svg"
                             viewBox="0 0 20 20"
-                            fill="currentColor"
+                            fill="gray"
                             className="h-5 w-5"
                         >
                             <path

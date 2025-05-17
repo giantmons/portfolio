@@ -2,20 +2,14 @@
 
 import FadeInOnScroll from "@/components/fade-on-scroll/FadeInOnScroll"
 import allCertificates from "@/data/certifications"
-import { Metadata } from "next";
 import Link from "next/link"
-
-export const metadata: Metadata = {
-  title: "Certifications",
-  description: "Explore all my certifications",
-};
 
 const certifications = () => {
 
     return <>
         <main className="flex flex-col min-h-screen bg-white dark:bg-black font-poppins">
             <FadeInOnScroll
-                className="flex items-center justify-start gap-6 mt-8 w-11/12 mx-auto md:w-8/12"
+                className="flex items-center justify-start gap-6 mt-8 w-11/12 mx-auto md:w-[810px]"
             >
                 <Link href={"/"}> <button className='text-sm text-black dark:text-white cursor-pointer'>
                     Back to Home

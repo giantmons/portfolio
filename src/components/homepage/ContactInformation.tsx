@@ -4,7 +4,7 @@ import { Mail } from "lucide-react";
 
 const ContactInformation = () => {
     return <>
-        <FadeInOnScroll className="bg-white dark:text-white dark:bg-[#111111] dark:border-[#333333] row-span-3 sm:col-span-2 border border-gray-200 rounded-lg p-5 transition hover:shadow-lg">
+        <FadeInOnScroll className="bg-white dark:text-white dark:bg-[#111111] dark:border-[#333333] row-span-3 sm:col-span-2 border border-gray-200 rounded-lg p-5 transition hover:shadow-sm">
             <h1 className="font-semibold flex gap-2 items-center"><Mail size={18} className="opacity-40" />Contact</h1>
 
             <a href="mailto:santosleuan@gmail.com">

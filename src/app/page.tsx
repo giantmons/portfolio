@@ -22,7 +22,7 @@ export default function Home() {
         </div>
 
         {/* Main content container with proper spacing */}
-        <main className="w-11/12 md:w-[700px] xl:w-[760px] mt-[425px] xl:mt-[50px] pb-16 text-black relative z-50">
+        <main className="w-11/12 md:w-[700px] xl:w-[810px] mt-[425px] xl:mt-[50px] pb-16 text-black relative z-50">
 
           {/* TITLE CONTENT */}
           <Title />

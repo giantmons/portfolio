@@ -1,13 +1,17 @@
 import Link from "next/link"
 import FadeInOnScroll from "../fade-on-scroll/FadeInOnScroll"
 import { Folder } from "lucide-react"
+import { FaGreaterThanEqual } from "react-icons/fa6"
+import { FaGreaterThan } from "react-icons/fa"
+import { PiGreaterThan, PiGreaterThanLight } from "react-icons/pi"
+import { LiaGreaterThanSolid } from "react-icons/lia"
 
 const RecentProjects = () => {
     return <>
-        <FadeInOnScroll className="bg-white dark:text-white dark:bg-[#111111] dark:border-[#333333] sm:col-span-4 row-span-3 border border-gray-200 rounded-lg p-5 transition hover:shadow-lg">
+        <FadeInOnScroll className="bg-white dark:text-white dark:bg-[#111111] dark:border-[#333333] sm:col-span-4 row-span-3 border border-gray-200 rounded-lg p-5 transition hover:shadow-sm">
             <div className="flex justify-between items-center">
                 <h1 className="font-semibold flex gap-2 items-center"><Folder size={18} className="opacity-40" />Recent Projects</h1>
-                <Link href={"/projects"}><p className="text-xs text-gray-500 cursor-pointer">See more</p></Link>
+                <Link href={"/projects"}><p className="text-xs text-gray-500 cursor-pointer">View all</p></Link>
             </div>
 
             <div className="grid grid-rows-2 gap-3 mt-3">
