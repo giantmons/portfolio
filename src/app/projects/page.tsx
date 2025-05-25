@@ -28,7 +28,7 @@ const Projects = () => {
 
     return (
         <main className="flex flex-col min-h-screen bg-white dark:bg-black font-poppins">
-            <FadeInOnScroll className="w-11/12 md:w-[800px] mx-auto dark:text-white flex items-center justify-start mt-8 gap-6">
+            <FadeInOnScroll className="w-11/12 md:w-[810px] mx-auto dark:text-white flex items-center justify-start mt-8 gap-6">
                 <Link href="/">
                     <button className="text-sm text-black dark:text-white cursor-pointer">Back to Home</button>
                 </Link>

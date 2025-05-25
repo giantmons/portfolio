@@ -9,6 +9,7 @@ import Certifications from "@/components/homepage/Certifications";
 import GetInTouch from "@/components/homepage/GetInTouch";
 import Footer from "@/components/homepage/Footer";
 import Title from "@/components/homepage/Title";
+import Chat from "@/components/chatbot/ChatBot";
 
 export default function Home() {
 
@@ -36,7 +37,6 @@ export default function Home() {
             {/* WORK EXPERIENCE */}
             <WorkExperience />
 
-
             {/* TECH STACK */}
             <TechStack />
 
@@ -54,6 +54,8 @@ export default function Home() {
 
             {/* CERTIFICATIONS */}
             <Certifications />
+
+            <Chat />
           </div>
 
           {/* FOOTER */}
