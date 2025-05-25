@@ -21,7 +21,7 @@ const Title = () => {
             {/* NAME AND DESCRIPTION */}
             <div className="order-2 mt-8 sm:order-none md:mt-0 xl:mr-36 dark:text-white flex flex-col justify-center items-center xl:items-start">
                 <h1 className="font-bold text-4xl text-center xl:text-left">Hi, I&apos;m Leuan👋🏻</h1>
-                <p className="text-sm leading-6 text-center xl:text-left">Frontend Developer. I love bringing my ideas to code,
+                <p className="text-sm leading-6 text-center xl:text-left">Software Developer. I love bringing my ideas to code,
                     but not when bugs get creative too.
                 </p>
                 <ThemeController />

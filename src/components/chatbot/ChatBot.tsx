@@ -71,7 +71,7 @@ export default function Chat() {
                         animate={{ y: 0, opacity: 1 }}
                         exit={{ y: 100, opacity: 0 }}
                         transition={{ duration: 0.3, ease: "easeOut" }}
-                        className="fixed bottom-20 right-4 w-96 h-[550px] bg-white border border-gray-200 dark:border-[#333333] rounded-lg z-50 flex flex-col">
+                        className="fixed bottom-20 right-4 w-[90%] sm:w-96 h-[550px] bg-white border border-gray-200 dark:border-[#333333] rounded-lg z-50 flex flex-col">
                         {/* Header */}
                         <div className="text-black border-b-1 border-gray-200 dark:border-[#333333] dark:bg-black p-4 rounded-t-md flex justify-between items-center">
                             <div className='flex items-center gap-2'>
