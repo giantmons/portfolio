@@ -39,6 +39,18 @@ const allCertificates = [
         link: 'https://www.credly.com/badges/d5ac4006-cd5e-4e34-8cc5-ec117233e194',
         animation: '700',
     },
+    {
+        title: 'Cloud Foundations - AWS Academy',
+        date: 'Issued Date: Dec 21, 2024',
+        link: 'https://www.credly.com/badges/c7e65e1a-3b72-429f-bef5-9d1a28f2001a',
+        animation: '700',
+    },
+    {
+        title: 'Cloud Architecting - AWS Academy',
+        date: 'Issued Date: Dec 21, 2024',
+        link: 'https://www.credly.com/badges/5f1feb5f-4044-4bb3-a45b-fee10980cd61/public_url',
+        animation: '700',
+    },
 ]
 
 export default allCertificates;

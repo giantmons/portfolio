@@ -26,6 +26,8 @@ const TechStack = () => {
                 <div className="badge badge-sm bg-transparent text-black dark:text-white border-gray-300">ESLint</div>
                 <div className="badge badge-sm bg-transparent text-black dark:text-white border-gray-300">Dart</div>
                 <div className="badge badge-sm bg-transparent text-black dark:text-white border-gray-300">Flutter</div>
+                <div className="badge badge-sm bg-transparent text-black dark:text-white border-gray-300">Playwright</div>
+                <div className="badge badge-sm bg-transparent text-black dark:text-white border-gray-300">Jest</div>
             </div>
 
             <h2 className="text-sm mt-3">Backend Development:</h2>
@@ -33,6 +35,8 @@ const TechStack = () => {
                 <div className="badge badge-sm bg-transparent text-black dark:text-white border-gray-300">NodeJS</div>
                 <div className="badge badge-sm bg-transparent text-black dark:text-white border-gray-300">Express</div>
                 <div className="badge badge-sm bg-transparent text-black dark:text-white border-gray-300">MongoDB</div>
+                <div className="badge badge-sm bg-transparent text-black dark:text-white border-gray-300">MySQL</div>
+                <div className="badge badge-sm bg-transparent text-black dark:text-white border-gray-300">PHP</div>
                 <div className="badge badge-sm bg-transparent text-black dark:text-white border-gray-300">PostgreSQL</div>
                 <div className="badge badge-sm bg-transparent text-black dark:text-white border-gray-300">REST API</div>
                 <div className="badge badge-sm bg-transparent text-black dark:text-white border-gray-300">JWT</div>
