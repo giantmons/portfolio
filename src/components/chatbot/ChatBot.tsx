@@ -113,7 +113,7 @@ export default function Chat() {
                                     <div className="relative">
                                         <div className="mb-5 inline-block px-4 py-3 rounded-lg max-w-xs text-sm bg-gray-100 dark:bg-[#1f2937] dark:text-white">
                                             Hey there! 👋🏻<br /><br />
-                                            Welcome to my interactive portfolio! I'm Leuan, I am here to guide you through my work in programming and web development. Feel free to ask about my projects, skills, or experience in tech — let’s chat!
+                                            Welcome to my portfolio! I'm Leuan, I am here to guide you through my work in programming and web development. Feel free to ask about my projects, skills, or experience in tech — let’s chat!
                                         </div>
                                         {/* Chat bubble tail */}
                                         <div className="absolute top-2 w-0 h-0 left-0 -translate-x-2 border-r-[12px] border-r-gray-100 dark:border-r-[#1f2937] border-t-[6px] border-t-transparent border-b-[6px] border-b-transparent" />
