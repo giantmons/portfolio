@@ -16,7 +16,7 @@ const allProjects = [
         github: 'https://github.com/giantmons/portfolio',
         link: '/',
             stack: [
-                'NextJS', 'TypeScript', 'TailwindCSS', 'ThreeJS', 'DaisyUI', 'Google Gemini'
+                'NextJS', 'TypeScript', 'TailwindCSS', 'ThreeJS', 'DaisyUI'
             ]
     },
     {
